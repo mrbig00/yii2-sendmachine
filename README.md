@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist mrbig00/yii2-sendmachine "*"
+php composer require --prefer-dist mrbig00/yii2-sendmachine "*"
 ```
 
 or add
@@ -22,10 +22,32 @@ or add
 to the require section of your `composer.json` file.
 
 
-Usage
+Configuration
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Once the extension is installed, set on your configuration file, in components section
 
 ```php
-<?= \mrbig00\sendmachine\AutoloadExample::widget(); ?>```
+'components' => [ 
+    
+    'sendmachine' => [
+        'sendmachine' => [
+            'class'    => 'mrbig00\sendmachine\Sendmachine',
+            'username' => '__YOUR_USERNAME_FROM_SMTP_PANEL__',
+            'password' => '__YOUR_PASSWORD_FROM_SMTP_PANEL__'
+        ],
+    ]
+    
+]
+```
+
+Usage
+----
+```php
+\Yii::$app->sendmachine->client
+```
+You can find more docs on: http://developers.sendmachine.com/
+
+Based on
+---
+https://github.com/Sendmachine
