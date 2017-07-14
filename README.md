@@ -24,8 +24,7 @@ to the require section of your `composer.json` file.
 
 Configuration
 -----
-
-Once the extension is installed, set on your configuration file, in components section
+Set your credentials
 
 ```php
 'components' => [ 
@@ -46,7 +45,7 @@ Usage
 ```php
 \Yii::$app->sendmachine->client
 ```
-You can find more docs on: http://developers.sendmachine.com/
+Docs: http://developers.sendmachine.com/
 
 Based on
 ---
