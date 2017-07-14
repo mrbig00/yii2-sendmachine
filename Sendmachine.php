@@ -27,9 +27,4 @@ class Sendmachine extends Component
         parent::init();
         $this->client = new Client($this->username, $this->password);
     }
-
-    public function welcome()
-    {
-        return "Hello..Welcome to MyComponent";
-    }
 }
